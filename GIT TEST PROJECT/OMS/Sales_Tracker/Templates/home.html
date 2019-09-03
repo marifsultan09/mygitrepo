@@ -5,6 +5,15 @@
     <title>Welcome to Home page</title>
 </head>
 <body>
-<h1>This is html5 home page</h1>
+    <h1>This is html5 home page</h1>
+
+    <form action="/" method="post">
+        {% csrf_token %}
+        <label for="team_name">Enter name: </label>
+        <input id="team_name" type="text" name="name_field" value="Default name for team.">
+        <!--<input type="submit" value="OK">-->
+        <button type="submit" value="OK"> Submit </button>
+    </form>
+
 </body>
 </html>
