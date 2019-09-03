@@ -16,9 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from .Sales_Tracker import views
+from Sales_Tracker import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('/', views.home)
+
+
+    path('', views.home),
+    path('about/', views.about),
+    path('help/', views.help),
+
 ]

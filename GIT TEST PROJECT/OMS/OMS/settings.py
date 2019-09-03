@@ -54,7 +54,7 @@ ROOT_URLCONF = 'OMS.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['OMS/Sales_Tracker/Templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
