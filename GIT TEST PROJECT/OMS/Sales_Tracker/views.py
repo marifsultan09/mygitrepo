@@ -16,6 +16,10 @@ def about(request):
     # return HttpResponse('About')
 
 
+def dashboard(request):
+    return render(request, 'dashboard.html')
+    # return HttpResponse('About')
+
 
 # Create your views here.
 def help(request):
