@@ -26,22 +26,26 @@
       </tr>
     </thead>
     <tbody>
-    {% for A in AA%}
+    {% for ticket in tickets%}
       <tr>
         <td>{{forloop.counter}}</td>
-        <td>{{A.PaxName}}</td>
-        <td>{{A.F_H_Name}}</td>
-        <td>{{A.Routing}}</td>
-        <td>{{A.Company}}</td>
-        <td>{{A.Travel_Agency}}</td>
-        <td>{{A.Percentage}}</td>
-        <td>{{A.Share}}</td>
+        <td>{{ticket.Pax_Name}}</td>
+        <td>{{ticket.F_H_Name}}</td>
+        <td>{{ticket.Route}}</td>
+        <td>{{ticket.Company_Name}}</td>
+        <td>{{ticket.Travel_agency}}</td>
+        <td>{{ticket.profit_percent}}</td>
+        <td>{{ticket.myshare}}</td>
       </tr>
     {% endfor %}
     </tbody>
   </table>
   </div>
 </div>
+
+<form action="newTicket" method="post">
+  <button type="submit" value="OK"> Enter Ticket </button>
+</form>
 
 </body>
 </html>
