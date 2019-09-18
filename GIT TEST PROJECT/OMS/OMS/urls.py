@@ -21,8 +21,9 @@ from Sales_Tracker import views
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-
     path('', views.home),
+    path('dashboard/', views.dashboard),
+    path('newTicket/', views.create_ticket),
     path('about/', views.about),
     path('help/', views.help),
 

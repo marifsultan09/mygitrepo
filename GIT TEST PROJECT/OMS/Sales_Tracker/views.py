@@ -1,7 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
-
-
+from .models import Ticket
+from .forms import Ticketform
 
 # Create your views here.
 def home(request):
@@ -16,6 +16,18 @@ def about(request):
     # return HttpResponse('About')
 
 
+def dashboard(request):
+    tickets = Ticket.objects.all()
+    print(tickets)
+    return render(request, 'dashboard.html', {'tickets': tickets})
+    # return HttpResponse('About')
+
+def create_ticket(request):
+    form = Ticketform(request.POST or None)
+    if form.is_valid():
+        form.save()
+        return redirect('/dashboard')
+    return render(request, 'add_ticket.html', {'form': form})
 
 # Create your views here.
 def help(request):
