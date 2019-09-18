@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enter New Ticket</title>
+</head>
+<body>
+    <h1>Create New Entry</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            {{ form.as_p }}
+        </div>
+
+        <!--"Pax_Name", "F_H_Name", "Route", "Company_Name", "Travel_agency", "profit_percent", "myshare"-->
+
+        <!--<label for="name">Passanger Name: </label>-->
+        <!--<input id="name" type="text" name="Pax_Name" value="Name">-->
+
+        <!--<label for="F_H_Name">Father/Husband Name: </label>-->
+        <!--<input id="F_H_Name" type="text" name="F_H_Name" value="password">-->
+        <!--&lt;!&ndash;<input type="submit" value="OK">&ndash;&gt;-->
+        <button type="submit" value="OK"> Save </button>
+    </form>
+
+</body>
+</html>

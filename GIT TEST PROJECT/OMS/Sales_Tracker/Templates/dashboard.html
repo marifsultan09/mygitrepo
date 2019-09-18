@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <h2>Summary</h2>
+  <p>The .table-responsive class creates a responsive table which will scroll horizontally on small devices (under 768px). When viewing on anything larger than 768px wide, there is no difference:</p>
+  <div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>PAX Name</th>
+        <th>Father/Husband Name</th>
+        <th>Routing</th>
+        <th>Company</th>
+        <th>Travel Agency</th>
+        <th>Percentage</th>
+        <th>Share</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for ticket in tickets%}
+      <tr>
+        <td>{{forloop.counter}}</td>
+        <td>{{ticket.Pax_Name}}</td>
+        <td>{{ticket.F_H_Name}}</td>
+        <td>{{ticket.Route}}</td>
+        <td>{{ticket.Company_Name}}</td>
+        <td>{{ticket.Travel_agency}}</td>
+        <td>{{ticket.profit_percent}}</td>
+        <td>{{ticket.myshare}}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<form action="newTicket" method="post">
+  <button type="submit" value="OK"> Enter Ticket </button>
+</form>
+
+</body>
+</html>
