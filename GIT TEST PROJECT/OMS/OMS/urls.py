@@ -23,7 +23,7 @@ urlpatterns = [
 
     path('', views.home),
     path('dashboard/', views.dashboard),
-    path('newTicket/', views.create_ticket),
+    path('newTicket', views.create_ticket, name='newTicket'),
     path('about/', views.about),
     path('help/', views.help),
 

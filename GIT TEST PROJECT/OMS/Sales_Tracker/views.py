@@ -18,7 +18,6 @@ def about(request):
 
 def dashboard(request):
     tickets = Ticket.objects.all()
-    print(tickets)
     return render(request, 'dashboard.html', {'tickets': tickets})
     # return HttpResponse('About')
 
