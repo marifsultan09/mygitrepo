@@ -3,9 +3,14 @@ from django.http import HttpResponse
 from .models import Ticket
 from .forms import Ticketform
 
+
+# CREAT     make new    POST
+# RETREIVE  get         GET
+# UPDATE    edit        PUT/PATCH
+# DELETE    delete      
+
 # Create your views here.
 def home(request):
-
     return render(request, 'home.html')
     # return HttpResponse('Home')
 

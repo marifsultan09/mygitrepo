@@ -51,6 +51,9 @@
 <!--</form>-->
 
 <a href="{% url 'newTicket' %}" > New Ticket</a>
-
+<form action="/" method="post">
+  {% csrf_token %}
+  <button  type="submit" value="OK"> Sign Out </button>
+</form>
 </body>
 </html>
