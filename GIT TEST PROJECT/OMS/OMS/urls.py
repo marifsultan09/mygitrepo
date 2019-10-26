@@ -23,7 +23,9 @@ urlpatterns = [
 
     path('', views.home),
     path('dashboard/', views.dashboard),
-    path('newTicket', views.create_ticket, name='newTicket'),
+    path('newTicket/', views.create_ticket, name='newTicket'),
+    path('editTicket/', views.edit_ticket, name='editTicket'),
+    path('removeTicket/', views.remove_ticket, name='removeTicket'),
     path('about/', views.about),
     path('help/', views.help),
 

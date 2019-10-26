@@ -38,6 +38,8 @@
         <td>{{ticket.price}}</td>
         <td>{{ticket.profit_percent}}</td>
         <td>{{ticket.myshare}}</td>
+        <td> <button type="submit" onclick="location.href='{% url 'editTicket' %}'" name='New Ticket'>Edit</button> </td>
+        <td> <button type="submit" onclick="location.href='{% url 'removeTicket' %}'" name='Remove Ticket'>Remove</button> </td>
       </tr>
     {% endfor %}
     </tbody>
@@ -49,11 +51,13 @@
   <!--{% csrf_token %}-->
   <!--<button type="submit" value="OK"> Enter Ticket </button>-->
 <!--</form>-->
+<!--<a href="{% url 'newTicket' %}" > New Ticket</a>-->
+<button type="submit" onclick="location.href='{% url 'newTicket' %}'" name='New Ticket'>New Ticket</button>
 
-<a href="{% url 'newTicket' %}" > New Ticket</a>
 <form action="/" method="post">
   {% csrf_token %}
   <button  type="submit" value="OK"> Sign Out </button>
 </form>
+
 </body>
 </html>

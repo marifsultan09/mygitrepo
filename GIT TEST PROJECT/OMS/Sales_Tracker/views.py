@@ -33,6 +33,18 @@ def create_ticket(request):
         return redirect('/dashboard')
     return render(request, 'add_ticket.html', {'form': form})
 
+def edit_ticket(request):
+    tickets = Ticket.objects.all()
+    return HttpResponse('Edit Ticket')
+    # form = Ticketform(request.POST or None)
+    # if form.is_valid():
+    #     form.save()
+    #     return redirect('/dashboard')
+    # return render(request, 'add_ticket.html', {'form': form})
+
+def remove_ticket(request):
+    return HttpResponse('Ticket Removed')
+
 # Create your views here.
 def help(request):
 
