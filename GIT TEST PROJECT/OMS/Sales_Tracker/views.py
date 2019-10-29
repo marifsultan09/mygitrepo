@@ -14,6 +14,9 @@ def home(request):
     return render(request, 'home.html')
     # return HttpResponse('Home')
 
+def login(request):
+    return render(request, 'login.html')
+    # return HttpResponse('Home')
 
 # Create your views here.
 def about(request):
