@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Welcome to Home page</title>
+    <title>Home</title>
 </head>
 <body>
-    <h1>This is html5 home page</h1>
+    <h1>User Login</h1>
 
     <form action="dashboard/" method="post">
         {% csrf_token %}
@@ -13,7 +13,7 @@
             {{ form.as_p }}
         </div>
 
-        <label for="uname">Enter name: </label>
+        <label for="uname">User Name: </label>
         <input id="uname" type="text" name="name" value="Name">
 
         <label for="pass">Enter name: </label>
