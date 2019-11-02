@@ -54,7 +54,7 @@
 <!--<a href="{% url 'newTicket' %}" > New Ticket</a>-->
 <button type="submit" onclick="location.href='{% url 'newTicket' %}'" name='New Ticket'>New Ticket</button>
 
-<form action="/" method="post">
+<form action="/login/" method="get">
   {% csrf_token %}
   <button  type="submit" value="OK"> Sign Out </button>
 </form>

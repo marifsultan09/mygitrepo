@@ -21,7 +21,7 @@ from Sales_Tracker import views
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    path('', views.login),
+    path('', include('django.contrib.auth.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('dashboard/', views.dashboard),
     path('newTicket/', views.create_ticket, name='newTicket'),
