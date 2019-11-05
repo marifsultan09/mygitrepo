@@ -33,8 +33,15 @@ def create_ticket(request):
         return redirect('/dashboard')
     return render(request, 'add_ticket.html', {'form': form})
 
+
 def edit_ticket(request):
-    tickets = Ticket.objects.all()
+    # tickets = Ticket.objects.all()
+    tkt = Ticket.objects.filter(id=1).first()
+    print(tkt.Company_Name)
+    if request.method == 'GET':
+        print(request)
+        print('get')
+        # print(tickets.method.get())
     return HttpResponse('Edit Ticket')
     # form = Ticketform(request.POST or None)
     # if form.is_valid():
