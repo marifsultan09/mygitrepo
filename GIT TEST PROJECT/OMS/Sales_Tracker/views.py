@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from .models import Ticket
 from .forms import Ticketform
 
+from django.contrib.auth import authenticate
 
 # CREAT     make new    POST
 # RETREIVE  get         GET
@@ -26,9 +27,18 @@ def about(request):
 
 def dashboard(request):
     tickets = Ticket.objects.all()
-    print('here')
+    user = authenticate(username=request.POST['username'], password=request.POST['password'])
+    if user is not None:
+    # A backend authenticated the credentials
+        print('recognised')
+        return render(request, 'dashboard.html', {'tickets': tickets})
+    else:
+    # No backend authenticated the credentials
+        print('not recognised')
+        return HttpResponse('Wrong Username or password')
+    # print('here')
     # return redirect('/dashboard',{'tickets': tickets})
-    return render(request, 'dashboard.html', {'tickets': tickets})
+
     # return HttpResponse('About')
 
 def create_ticket(request):
