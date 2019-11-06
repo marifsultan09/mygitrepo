@@ -38,7 +38,7 @@
         <td>{{ticket.price}}</td>
         <td>{{ticket.profit_percent}}</td>
         <td>{{ticket.myshare}}</td>
-        <td> <button type="submit" onclick="location.href='{% url 'editTicket' %}'" name='New Ticket'>Edit</button> </td>
+        <td> <button type="submit" onclick="location.href='{% url 'editTicket' %}'" name='Edit Ticket'>Edit</button> </td>
         <td> <button type="submit" onclick="location.href='{% url 'removeTicket' %}'" name='Remove Ticket'>Remove</button> </td>
       </tr>
     {% endfor %}
